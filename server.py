@@ -14,7 +14,7 @@ PRODUCT_ID = 0x8005
 
 reattempt_in = 10
 max_total_attempt_seconds = 60
-            
+
 interval_ms = 100
 
 def get_read():
@@ -56,5 +56,5 @@ if __name__ == "__main__":
     num_args = len(argv)
 
     server = 'localhost' if num_args < 2 else argv[1]
-    port = 3000 if num_args < 3 else argv[2]
+    port = (int) (3000 if num_args < 3 else argv[2])
     send()
